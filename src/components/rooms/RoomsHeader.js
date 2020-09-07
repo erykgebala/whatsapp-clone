@@ -13,7 +13,7 @@ export default function RoomsHeader() {
             </div>
             <div className="right-container">
                 <IconButton>
-                    <DonutLargeIcon/>
+                <DonutLargeIcon/>
                 </IconButton>
                 <IconButton><ChatIcon/></IconButton>
                 <IconButton><MoreVertIcon/></IconButton>

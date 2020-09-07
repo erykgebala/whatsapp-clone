@@ -11,6 +11,8 @@ export default function RoomsList() {
                 <RoomItem/>
                 <RoomItem/>
                 <RoomItem/>
+   
+                
            </div>
         </div>
     )

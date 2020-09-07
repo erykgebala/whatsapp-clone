@@ -1,36 +1,37 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Chat.css'
-import { Avatar, IconButton } from '@material-ui/core'
-import MoreVertIcon from '@material-ui/icons/MoreVert';
-import SearchOutlinedIcon from '@material-ui/icons/SearchOutlined';
-import AttachFileOutlinedIcon from '@material-ui/icons/AttachFileOutlined';
 import Message from './Message'
+import SentimentSatisfiedIcon from '@material-ui/icons/SentimentSatisfied';
+import MicIcon from '@material-ui/icons/Mic';
+import ChatHeader from './ChatHeader';
 
 function Chat() {
+    const [message, setMessage] = useState('');
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        setMessage('')
+    }
+    
     return (
         <div className="chat-container">
-                <div className="chat-header">
-                    <Avatar/>
-                    <div className="chat-header-info">
-                        <h4>Nazwa pokoju</h4>
-                        <p>Ostatnio widziany 2020-12-12</p>
-                    </div>
-                    <div className="chat-header-actions">
-                        <IconButton>
-                            <SearchOutlinedIcon/>
-                        </IconButton>
-                        <IconButton>
-                           <AttachFileOutlinedIcon/>
-                        </IconButton>
-                        <IconButton>
-                            <MoreVertIcon/>
-                        </IconButton>
-                    </div>
-                </div>
-                <div className="chat-body">
-                    <Message/>
-                    <Message/>
-                </div>
+            <ChatHeader/>
+            <div className="chat-body">
+                <Message/>
+                <Message/>
+                <Message/>
+                <Message/>
+                <Message/>
+                <Message/>
+            </div>
+            <div className="chat-footer">
+                <SentimentSatisfiedIcon/>
+                <form onSubmit={handleSubmit}>
+                    <input type="text" value={message}  onChange={(e) => setMessage(e.target.value)} placeholder="Wpisz wiadomosc"/>
+                    <button type="submit">Wyslij</button>
+                </form>
+                <MicIcon/>
+            </div>
         </div>
     )
 }

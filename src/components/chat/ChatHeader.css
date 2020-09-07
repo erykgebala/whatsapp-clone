@@ -1,0 +1,12 @@
+.chat-header-info {
+    flex : 1;
+    padding-left: 20px;
+}
+.chat-header-info h4 {
+    margin: 0 0 5px 0;
+}
+.chat-header-info p {
+    color: grey;
+    font-size :12px;
+    margin: 0;
+}
