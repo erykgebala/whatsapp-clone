@@ -1,0 +1,25 @@
+.searchbar-container {
+    display: flex;
+    background-color: #fafafa;
+    padding: 10px;
+    align-items: center;
+}
+.searchbar-body {
+    display: flex;
+    flex: 1;
+    background-color: #fff;
+    align-items: center;
+    padding: 10px;
+    border-radius: 30px;;
+    
+}
+.searchbar-body input {
+    flex: 1;
+    border-width: 0;
+    outline-width: 0;
+    padding: 5px 0;
+}
+.searchbar-body >.MuiSvgIcon-root {
+    color: #666;
+    margin-right: 5px;
+}

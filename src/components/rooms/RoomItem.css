@@ -1,0 +1,24 @@
+.room {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 20px;
+    font-size:14px;
+}
+.room h4 {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+.room p {
+    margin: 0;
+    padding: 0;
+}
+.room .room-body {
+  display: flex;
+  flex-direction: column;
+}
+.room > .MuiAvatar-root   {
+    margin:  5px 20px 0 0 ;
+}

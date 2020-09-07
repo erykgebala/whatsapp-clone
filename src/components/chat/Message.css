@@ -1,0 +1,27 @@
+.message {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    margin-bottom: 25px;
+}
+.message.reciver {
+    margin-left: auto;
+    
+}
+.message.reciver .msg-content  {
+    background-color: #61c4a3;
+}
+.message .msg-owner {
+    font-size: 12px;
+    font-weight: 700;
+}
+.message .msg-content {
+    margin: 5px 0 0 0 ;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+.message .msg-time {
+    font-size: 11px;
+    padding-left: 10px;
+}

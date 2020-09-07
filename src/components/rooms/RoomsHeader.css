@@ -1,0 +1,7 @@
+.rooms-header-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    align-items: center;
+    border-right: 1px solid #ddd;
+}

@@ -1,0 +1,17 @@
+.rooms-list-container  {
+    display: flex;
+    background-color: #fafafa;
+    padding: 0 10px 10px 10px;
+    flex: 1;
+}
+.rooms-list-body {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    flex: 1;    
+}
+.rooms-list-body h3 {
+    font-size: 18px;
+    padding: 0;
+    margin: 20px 0 5px 20px;
+}
