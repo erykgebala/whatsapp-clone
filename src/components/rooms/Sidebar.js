@@ -4,11 +4,11 @@ import SearchBar from './SearchBar';
 import RoomsList from './RoomsList';
 import RoomsHeader from './RoomsHeader';
 
-function Sidebar() {
+function Sidebar(props) {
     return (
         <div className="rooms-container">
             <div className="rooms-header">
-                <RoomsHeader/>
+                <RoomsHeader user={props.user}/>
             </div>
             <div className="rooms-body">
                 <SearchBar/>

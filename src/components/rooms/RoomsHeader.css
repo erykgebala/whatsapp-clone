@@ -5,3 +5,11 @@
     align-items: center;
     border-right: 1px solid #ddd;
 }
+.rooms-header-left-container {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+}
+.rooms-header-left-container > .MuiAvatar-root {
+    margin-right: 10px;;
+}

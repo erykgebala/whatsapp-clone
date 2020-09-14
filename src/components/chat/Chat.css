@@ -43,3 +43,8 @@
 .chat-footer form input:focus {
     outline: none;
 }
+.scrollToElement {
+    height: 1px;
+    maring: 0;
+    padding: 0;
+}

@@ -5,13 +5,13 @@ import ChatIcon from '@material-ui/icons/Chat';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
 import { Avatar, IconButton } from '@material-ui/core/';
 
-export default function RoomsHeader() {
+export default function RoomsHeader(props) {
     return (
         <div className="rooms-header-container">
-            <div className="left-container">
-                <Avatar/>
+            <div className="rooms-header-left-container">
+                <Avatar/> {props.user}
             </div>
-            <div className="right-container">
+            <div className="rooms-header-right-container">
                 <IconButton>
                 <DonutLargeIcon/>
                 </IconButton>
