@@ -10,8 +10,9 @@ function App() {
   const [user, setUser] = useState();
   
   useEffect(() => {
-    const user = prompt("podaj imie");
-    setUser(user)
+    //const user = prompt("podaj imie");
+    //setUser(user)
+    setUser('Eryk')
   }, []);
 
   useEffect(() => {

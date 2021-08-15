@@ -9,7 +9,7 @@ export default function RoomsHeader(props) {
     return (
         <div className="rooms-header-container">
             <div className="rooms-header-left-container">
-                <Avatar/> {props.user}
+                <Avatar src='https://avatars.dicebear.com/api/human/1332.svg'/> {props.user}
             </div>
             <div className="rooms-header-right-container">
                 <IconButton>

@@ -1,14 +1,19 @@
-import React from 'react'
+import React, { useState , useEffect} from 'react';
 import { Avatar } from '@material-ui/core/';
 import './RoomItem.css'
 
-export default function RoomItem() {
+export default function RoomItem({room}) {
+    const [seed, setSeed] = useState('');
+
+    useEffect(() => {
+      setSeed(Math.floor(Math.random() * 5000));
+    }, [])
     return (
         <div className="room">
-            <Avatar/>
+            <Avatar src={`https://avatars.dicebear.com/api/human/${seed}.svg`}/>
             <div className="room-body">
-                <h4>Nazwa pokoju</h4>
-                <p>Opis pokojusad fdsaf sadf sad fsa fsafd sa</p>
+                <h4>{room.name}</h4>
+                <p>{room.desc}</p>
             </div>
         </div>
     )

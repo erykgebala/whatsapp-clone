@@ -6,7 +6,7 @@ import MicIcon from '@material-ui/icons/Mic';
 import ChatHeader from './ChatHeader';
 import axios from '../../axiosConfig';
 
-function Chat(props) {
+function Chat({messages, user}) {
     const [msg, setMsg] = useState('');
 
     const messagesEndRef = useRef();
@@ -15,14 +15,14 @@ function Chat(props) {
         messagesEndRef.current.scrollIntoView({ behavior: "smooth" })
     }
 
-    useEffect(scrollToBottom, [props.messages]);
+    useEffect(scrollToBottom, [messages]);
 
     const handleSubmit = (e) => {
         e.preventDefault();
         axios.post('/v1/messages', {
-            "owner": props.user,
+            "owner": user,
             "content": msg,
-            "timestamp": "testowy cza3s2"
+            "timestamp": new Date().toUTCString()
         });
         setMsg('')
     }
@@ -31,8 +31,8 @@ function Chat(props) {
         <div className="chat-container">
             <ChatHeader/>
             <div className="chat-body">
-                {props.messages.map((message)=> {
-                    return <Message key={message._id} message={message} user={props.user}/>;
+                {messages.map((message)=> {
+                    return <Message key={message._id} message={message} user={user}/>;
                 })}
                 <div className="scrollToElement" ref={messagesEndRef}></div>
             </div>
